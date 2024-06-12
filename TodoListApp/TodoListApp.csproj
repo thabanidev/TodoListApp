@@ -12,4 +12,8 @@
     <None Include="Components\Pages\Home.razor" />
   </ItemGroup>
 
+	<Target Name="Tailwind" BeforeTargets="Build">
+		<Exec Command="npx tailwindcss -i ./wwwroot/css/app.css -o ./wwwroot/css/tailwind.css" />
+	</Target>
+
 </Project>
